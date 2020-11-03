@@ -1040,6 +1040,7 @@ textarea {
   font-weight: 500;
   padding: 0;
   position: relative;
+  text-transform: uppercase;
   width: auto;
 }
 .navbar .navbar__menu li a,
