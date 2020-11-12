@@ -21,7 +21,7 @@
   --color-rgb: 215,58,66;
   --text-color: #17181E;
   --headings-color: #17181E;
-  --logo-color: #FFFFFF;
+  --logo-color: #000000;
   --hero-height: 50vh;
   --hero-bg: #17181E;
   --hero-heading-color: #FFFFFF;
@@ -804,12 +804,21 @@ textarea {
 
 .logo {
   color: var(--logo-color) !important;
-  font-size: 1.2136296308rem;
+  font-size: 0.97rem;
   font-weight: var(--font-weight-normal);
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 .logo > img {
   max-height: calc(3rem + 1vw);
+  margin-right: 0.75rem;
+}
+
+@media all and (min-width: 360px) {
+  .logo {
+    font-size: 1.2136296308rem;
+  }
 }
 
 .search {
@@ -2147,7 +2156,17 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column-reverse;
+  padding-top: 1.5rem;
 }
+
+@media all and (min-width: 56.25em) {
+  .footer {
+    flex-direction: initial;
+    padding-top: 0.5rem;
+  }
+}
+
 .footer__social svg {
   fill: var(--white);
   height: 0.9374999997rem;
@@ -2173,7 +2192,7 @@ textarea {
 }
 
 .footer__menu > a {
-  margin: 0 1.5rem;
+  margin: 0 0.75rem;
 }
 
 .footer a {

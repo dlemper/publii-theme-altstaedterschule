@@ -57,6 +57,11 @@
             {{{@config.custom.copyrightText}}}
         </div>
     {{/if}}
+    <div class="footer__menu">
+       {{#each (postsByTitle 'Impressum,Datenschutz') }}
+          <a href="{{this.url}}">{{this.title}}</a>
+       {{/each}}
+    </div>
     {{#if @config.custom.backToTopButton}}
        <button class="footer__bttop js-footer__bttop" aria-label="{{ translate 'partials.footer.backToTop' }}"> 
            <svg>

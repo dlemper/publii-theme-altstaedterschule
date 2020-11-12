@@ -46,7 +46,7 @@ var generateOverride = function (params) {
            --color-rgb:          ${params.primaryColor.replace('#', '').match(/[a-f0-9]{2,2}/gmi).map(n => parseInt(n, 16)).join(', ')};
            --text-color:         ${params.textColor}; 
            --headings-color:     ${params.headingColor};      
-           --logo-color:         #FFFFFF;
+           --logo-color:         #000000;
            --hero-height:        ${params.heightHero};
            --hero-bg:            ${params.heroBackground};
            --hero-heading-color: ${params.heroHeadingColor};
