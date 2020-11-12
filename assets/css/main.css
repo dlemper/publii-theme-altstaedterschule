@@ -21,7 +21,7 @@
   --color-rgb: 215,58,66;
   --text-color: #17181E;
   --headings-color: #17181E;
-  --logo-color: #FFFFFF;
+  --logo-color: #000000;
   --hero-height: 50vh;
   --hero-bg: #17181E;
   --hero-heading-color: #FFFFFF;
@@ -535,7 +535,6 @@ button {
   -webkit-transition: all 0.24s ease-out;
   -o-transition: all 0.24s ease-out;
   transition: all 0.24s ease-out;
-  text-transform: uppercase;
   vertical-align: middle;
   will-change: transform;
 }
@@ -805,12 +804,21 @@ textarea {
 
 .logo {
   color: var(--logo-color) !important;
-  font-size: 1.2136296308rem;
+  font-size: 0.97rem;
   font-weight: var(--font-weight-normal);
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 .logo > img {
   max-height: calc(3rem + 1vw);
+  margin-right: 0.75rem;
+}
+
+@media all and (min-width: 360px) {
+  .logo {
+    font-size: 1.2136296308rem;
+  }
 }
 
 .search {
@@ -1040,7 +1048,6 @@ textarea {
   font-weight: 500;
   padding: 0;
   position: relative;
-  text-transform: uppercase;
   width: auto;
 }
 .navbar .navbar__menu li a,
@@ -1538,10 +1545,25 @@ textarea {
   z-index: 3;
 }
 
-.feed__item {
-  margin-top: calc(2.55rem + 1.5vw);
-  padding-bottom: calc(0.5666666667rem + 1vw);
+.feed {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.feed__item {
+  margin: 1rem;
+  padding-bottom: calc(0.5666666667rem + 1vw);
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-width: 24rem;
+  border-radius: 0.25rem;
+}
+
+.feed__item .wrapper {
+  padding: 1rem 1.5rem;
+}
+
 .feed__image {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -2128,10 +2150,23 @@ textarea {
   background: var(--dark);
   font-family: var(--body-font);
   overflow: hidden;
-  padding: calc(3.4rem + 1vw) var(--page-margin);
+  padding: 0.5rem var(--page-margin);
   margin: calc(2.55rem + 1vw) 0 0;
-  text-align: center;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding-top: 1.5rem;
 }
+
+@media all and (min-width: 56.25em) {
+  .footer {
+    flex-direction: initial;
+    padding-top: 0.5rem;
+  }
+}
+
 .footer__social svg {
   fill: var(--white);
   height: 0.9374999997rem;
@@ -2149,9 +2184,17 @@ textarea {
   color: var(--gray-2);
   font-size: 0.6789341556rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   padding: 1.7rem 0;
 }
+
+.footer__copyright > p{
+  margin: 0;
+}
+
+.footer__menu > a {
+  margin: 0 0.75rem;
+}
+
 .footer a {
   color: var(--white);
 }
