@@ -2,12 +2,12 @@
     "partials": {
         
         "menu": {
-            "label": "Menu"
+            "label": "Menü"
         },
         
         "pagination": {
-            "prev": "Previous",
-            "next": "Next"
+            "prev": "Vorherige",
+            "next": "Nächste"
         },
         
         "shareButtons": {
@@ -21,42 +21,42 @@
         },
         
         "footer": {
-            "backToTop": "Back to top"
+            "backToTop": "Zurück nach oben"
         }
     },
     
     "post": {
-        "publishedBy": "By",
-        "relatedPosts": "You should also read:",
-        "readMore": "Continue reading...",
-        "lastUpdatedDate": "This article was updated on",
-        "comments": "Comments",
-        "previousPost": "Previous",
-        "nextPost": "Next"
+        "publishedBy": "von",
+        "relatedPosts": "Das könnte Sie auch interessieren:",
+        "readMore": "weiterlesen...",
+        "lastUpdatedDate": "Dieser Artikel wurde aktualisiert am",
+        "comments": "Kommentare",
+        "previousPost": "Vorheriger",
+        "nextPost": "Nächster"
     },
     
     "tags": {
         "tagsPageTitle": "Tags",
-        "description": "Collection of all tags"
+        "description": "Sammlung aller Tags"
     },
 
     "author": {
-        "visitWebsite": "Visit website"
+        "visitWebsite": "Webseite besuchen"
     },
 
     "error": {
         "404": "404",
-        "message-1": "Page not found",
-        "message-2": "The page you were looking for appears to have been moved, deleted or does not exist. You could go back to where you were or head straight to our home page.",
-        "button": "Go home"
+        "message-1": "Seite wurde nicht gefunden",
+        "message-2": "Die Seite, die Sie suchen, wurde verschoben, gelöscht oder existiert nicht. Sie können zur vorigen Seite zurückkehren oder direkt zu unserer Hauptseite.",
+        "button": "Zur Hauptseite"
 
     },
     
     "search": {
-        "placeholder": "search...",
-        "search": "Search",
-        "close": "Close",
-        "title": "Search",
-        "submit": "Submit"
+        "placeholder": "Suche...",
+        "search": "Suchen",
+        "close": "Schließen",
+        "title": "Suchen",
+        "submit": "Absenden"
     }
 }
