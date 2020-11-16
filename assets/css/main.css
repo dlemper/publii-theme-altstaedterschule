@@ -152,7 +152,7 @@ html.no-scroll {
 }
 
 body {
-  background: var(--white);
+  background: rgba(0,0,0,0.02);
   color: var(--text-color);
   font-family: var(--body-font);
   font-weight: var(--font-weight-normal);
@@ -1442,7 +1442,7 @@ textarea {
 }
 
 .site-container {
-  background: var(--white);
+  /*background: var(--white);*/
   max-width: 100%;
   overflow: hidden;
 }
@@ -1551,6 +1551,7 @@ textarea {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: calc(2.55rem + 1vw);
 }
 
 .feed__item {
@@ -1560,6 +1561,7 @@ textarea {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   max-width: 24rem;
   border-radius: 0.25rem;
+  background-color: var(--white);
 }
 
 .feed__item .wrapper {
@@ -1849,6 +1851,7 @@ textarea {
   margin-top: calc(2.55rem + 1vw);
   padding: 2.55rem var(--page-margin) 2.8333333333rem;
   position: relative;
+  background-color: var(--white);
 }
 @media all and (min-width: 37.5em) {
   .post__nav-inner {
@@ -2149,11 +2152,10 @@ textarea {
 
 /* Footer ------------------------ */
 .footer {
-  background: var(--dark);
+  background: #00d1b2;
   font-family: var(--body-font);
   overflow: hidden;
   padding: 0.5rem var(--page-margin);
-  margin: calc(2.55rem + 1vw) 0 0;
   text-align: left;
   display: flex;
   justify-content: space-between;
