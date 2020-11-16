@@ -51,6 +51,10 @@ main {
   margin-top: var(--navbar-height);
 }
 
+main > article {
+  margin-bottom: calc(2.55rem + 1vw);
+}
+
 *,
 *:before,
 *:after {
@@ -1848,7 +1852,6 @@ textarea {
 
 .post__nav {
   border-top: 1px solid var(--light);
-  margin-top: calc(2.55rem + 1vw);
   padding: 2.55rem var(--page-margin) 2.8333333333rem;
   position: relative;
   background-color: var(--white);
