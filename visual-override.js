@@ -28,7 +28,7 @@ var generateOverride = function (params) {
         :root {
            --page-margin:        ${params.pageMargin};
            --entry-width:        ${params.pageWidth}; 
-           --navbar-height:      4.4rem; 
+           --navbar-height:      4rem; 
            --line-height:        ${params.lineHeight}; 
            --font-weight-normal: ${params.fontNormalWeight}; 
            --font-weight-bold:   ${params.fontBoldWeight}; 
