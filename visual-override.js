@@ -215,7 +215,13 @@ var generateOverride = function (params) {
                transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1); 
          }`;    	 
     } 
-        
+    
+    output += `
+    .cookie-popup--uses-badge,
+    .cookie-popup.cookie-popup--uses-badge.cookie-popup--uses-link {
+    background: #ffc439;
+    }
+    `;
   
     return output;
 }
