@@ -1,8 +1,5 @@
 {{> head}}
 {{> top}}
-{{#checkIf @config.custom.frontSource '==' "post" }}
-   {{> frontpage-post}}
-{{else}}
    <main>
       <div class="hero">
          {{#if @config.custom.uploadHero}}
@@ -47,6 +44,78 @@
             </header>
          {{/if}}
       </div>
+
+      {{#checkIf @config.custom.frontSource '==' "post" }}
+         {{#getPost @config.custom.frontPost}}
+            <article class="post">
+
+            <div class="wrapper post__entry">
+               {{{text}}}  
+            </div>
+
+            {{#checkIfAny postViewConfig.displayLastUpdatedDate postViewConfig.displayTags postViewConfig.displayShareButtons postViewConfig.displayAuthorBio}}
+               <footer class="wrapper post__footer">
+
+                  {{#if postViewConfig.displayLastUpdatedDate}}
+                     {{#if modifiedAt}}
+                        <p class="post__last-updated">
+                           {{ translate 'post.lastUpdatedDate' }}
+                           {{#checkIf @config.custom.formatDate '!=' 'custom'}}
+                              {{date modifiedAt @config.custom.formatDate}}
+                           {{else}}
+                              {{date modifiedAt @config.custom.formatDateCustom}}
+                           {{/checkIf}}
+                        </p>
+                     {{/if}}
+                  {{/if}}
+
+                  {{#if postViewConfig.displayTags}}
+                     {{#if tags}}
+                        <ul class="post__tag">
+                           {{#each tags}}
+                              <li>
+                                 <a href="{{url}}">{{name}}</a>
+                              </li>
+                           {{/each}}
+                        </ul>
+                     {{/if}}
+                  {{/if}}
+
+                  {{#if postViewConfig.displayShareButtons}}
+                     <div class="post__share">
+                        {{> share-buttons}}
+                     </div>
+                  {{/if}}
+
+                  {{#if postViewConfig.displayAuthorBio}}
+                     <div class="post__bio bio">
+                        {{#author}}
+                           {{#if avatar}}                            
+                           <img 
+                                 class="bio__avatar"
+                                 src="{{avatar}}" 
+                                 {{ lazyload "eager" }}  
+                                 alt="{{name}}">                           
+                           {{/if}}
+                           <div class="bio__info">
+                              <h3 class="bio__name">
+                                 <a href="{{url}}" class="invert" rel="author">{{name}}</a>
+                              </h3>
+
+                              {{#if description}}
+                                 <p>{{description}}
+                                 </p>
+                              {{/if}}
+                           </div>
+                        {{/author}}
+                     </div>
+                  {{/if}}
+               </footer>
+            {{/checkIfAny}}
+            </article>
+         {{/getPost}}
+      {{/checkIf}}
+
       <div class="feed">
          {{#each posts}}
             <article class="feed__item">
@@ -119,5 +188,4 @@
          {{> pagination}}
       </div>
    </main>
-{{/checkIf}}
 {{> footer}}
