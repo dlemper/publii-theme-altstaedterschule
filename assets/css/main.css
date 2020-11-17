@@ -173,7 +173,7 @@ a {
   transition: all 0.24s ease-out;
 }
 a:hover {
-  color: var(--dark);
+  text-decoration: underline;
 }
 a:active {
   color: var(--dark);
@@ -190,7 +190,7 @@ a:focus {
   transition: all 0.24s ease-out;
 }
 .invert:hover {
-  color: var(--color);
+  text-decoration: underline;
 }
 .invert:active {
   color: var(--color);
@@ -260,13 +260,13 @@ h2,
 @media screen and (min-width: 20rem) {
   h2,
 .h2 {
-    font-size: calc(1.3808408252rem + 1.0874829835 * ((100vw - 20rem) / 50));
+    font-size: calc(1.3808408252rem + 0.0874829835 * ((100vw - 20rem) / 50));
   }
 }
 @media screen and (min-width: 70rem) {
   h2,
 .h2 {
-    font-size: 2.4683238087rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1294,7 +1294,7 @@ textarea {
   overflow: auto;
   pointer-events: auto;
   position: fixed;
-  top: 4.4rem;
+  top: 4rem;
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
   -o-transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -1461,10 +1461,9 @@ textarea {
 
 .readmore {
   display: inline-block;
-  color: var(--gray-2);
+  color: var(--color);
   font-size: 0.8239746086rem;
-  font-style: italic;
-  text-decoration: underline;
+  font-weight: bold;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
 }
@@ -1570,6 +1569,14 @@ textarea {
 
 .feed__item .wrapper {
   padding: 1rem 1.5rem;
+}
+
+.feed__item div.wrapper {
+  padding-top: 0;
+}
+
+.feed__item header.wrapper {
+  padding-bottom: 0;
 }
 
 .feed__image {
