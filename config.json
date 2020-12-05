@@ -486,7 +486,7 @@
             "name": "primaryColor",
             "label": "Primary color",
             "group": "Colors",
-            "value": "#D73A42",
+            "value": "#3a63a1",
             "type": "colorpicker"
         },             
         {

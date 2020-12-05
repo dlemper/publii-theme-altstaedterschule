@@ -14,7 +14,7 @@ var generateOverride = function (params) {
         params.fontBoldWeight !== '700' || 
         params.fontHeadignsWeight !== '700' ||
         params.fontHeadingsTransform !== 'none' ||
-        params.primaryColor !== '#D73A42' || 
+        params.primaryColor !== '#3a63a1' || 
         params.textColor !== '#17181E' || 
         params.headingColor !== '#17181E' ||      
         params.heightHero !== '50vh' ||
@@ -82,7 +82,7 @@ var generateOverride = function (params) {
         }`;
     }
 
-    if (params.primaryColor !== '#D73A42') {
+    if (params.primaryColor !== '#3a63a1') {
         output += `
       
         input[type=checkbox]:checked + label:before{

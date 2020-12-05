@@ -17,8 +17,8 @@
   --gray-2: #747577;
   --light: #E6E7EB;
   --lighter: #F3F3F3;
-  --color: #D73A42;
-  --color-rgb: 215,58,66;
+  --color: #3a63a1;
+  --color-rgb: 58,99,161;
   --text-color: #17181E;
   --headings-color: #17181E;
   --logo-color: #000000;
@@ -1029,6 +1029,11 @@ textarea {
       -ms-flex-order: 3;
           order: 3;
 }
+
+.navbar a {
+  text-decoration: none;
+}
+
 .navbar .navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2162,7 +2167,7 @@ textarea {
 
 /* Footer ------------------------ */
 .footer {
-  background: #00d1b2;
+  background: rgba(120, 193, 67, 0.8);
   font-family: var(--body-font);
   overflow: hidden;
   padding: 0.5rem var(--page-margin);
