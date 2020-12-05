@@ -17,8 +17,8 @@
   --gray-2: #747577;
   --light: #E6E7EB;
   --lighter: #F3F3F3;
-  --color: #D73A42;
-  --color-rgb: 215,58,66;
+  --color: #3a63a1;
+  --color-rgb: 58,99,161;
   --text-color: #17181E;
   --headings-color: #17181E;
   --logo-color: #000000;
@@ -173,7 +173,7 @@ a {
   transition: all 0.24s ease-out;
 }
 a:hover {
-  color: var(--dark);
+  text-decoration: underline;
 }
 a:active {
   color: var(--dark);
@@ -190,7 +190,7 @@ a:focus {
   transition: all 0.24s ease-out;
 }
 .invert:hover {
-  color: var(--color);
+  text-decoration: underline;
 }
 .invert:active {
   color: var(--color);
@@ -249,7 +249,7 @@ h1,
 @media screen and (min-width: 70rem) {
   h1,
 .h1 {
-    font-size: 3.195339641rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -260,13 +260,13 @@ h2,
 @media screen and (min-width: 20rem) {
   h2,
 .h2 {
-    font-size: calc(1.3808408252rem + 1.0874829835 * ((100vw - 20rem) / 50));
+    font-size: calc(1.3808408252rem + 0.0874829835 * ((100vw - 20rem) / 50));
   }
 }
 @media screen and (min-width: 70rem) {
   h2,
 .h2 {
-    font-size: 2.4683238087rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1029,6 +1029,11 @@ textarea {
       -ms-flex-order: 3;
           order: 3;
 }
+
+.navbar a {
+  text-decoration: none;
+}
+
 .navbar .navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1053,7 +1058,17 @@ textarea {
   padding: 0;
   position: relative;
   width: auto;
+  border-radius: 0.25rem;
 }
+
+.navbar .navbar__menu li.active {
+  background-color: rgba(252, 225, 13, 0.4);
+}
+
+.navbar > .navbar__menu > .active-parent > a {
+  background-color: rgba(252, 225, 13, 0.4);
+}
+
 .navbar .navbar__menu li a,
 .navbar .navbar__menu li span[aria-haspopup=true] {
   color: rgba(var(--black-rgb),.5);
@@ -1062,12 +1077,16 @@ textarea {
   -webkit-transition: all 0.24s ease-out;
   -o-transition: all 0.24s ease-out;
   transition: all 0.24s ease-out;
+  border-radius: 0.25rem;
 }
-.navbar .navbar__menu li a:active, .navbar .navbar__menu li a:focus, .navbar .navbar__menu li a:hover,
+.navbar .navbar__menu li a:active,
+.navbar .navbar__menu li a:focus,
+.navbar .navbar__menu li a:hover,
 .navbar .navbar__menu li span[aria-haspopup=true]:active,
 .navbar .navbar__menu li span[aria-haspopup=true]:focus,
 .navbar .navbar__menu li span[aria-haspopup=true]:hover {
   color: rgba(var(--black-rgb), 0.7);
+  background-color: rgba(252, 225, 13, 0.6);
 }
 .navbar .navbar__menu li span {
   color: var(--white);
@@ -1075,10 +1094,10 @@ textarea {
   display: block;
   padding: 0 0.5666666667rem;
 }
-.navbar .navbar__menu > li:hover > a, .navbar .navbar__menu > li:hover > span[aria-haspopup=true] {
+.navbar .navbar__menu > li:hover > a,
+.navbar .navbar__menu > li:hover > span[aria-haspopup=true] {
   color: rgba(var(--black-rgb), 0.7);
-  background: rgba(var(--black-rgb), .1);
-  border-radius: 0.25rem;
+  background: rgba(252, 225, 13, 0.6);
 }
 .navbar .has-submenu:active > .navbar__submenu,
 .navbar .has-submenu:focus > .navbar__submenu,
@@ -1144,6 +1163,8 @@ textarea {
   -o-transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
   transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
   transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1), -webkit-transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 .navbar .navbar__submenu__submenu {
   z-index: 2;
@@ -1151,6 +1172,7 @@ textarea {
 .navbar .navbar__submenu li {
   line-height: 1.5;
   font-size: 0.7241964329rem;
+  border-radius: 0;
 }
 .navbar .navbar__submenu li a,
 .navbar .navbar__submenu li span[aria-haspopup=true] {
@@ -1160,11 +1182,13 @@ textarea {
   -o-transition: all 0.24s ease;
   transition: all 0.24s ease;
 }
-.navbar .navbar__submenu li a:active, .navbar .navbar__submenu li a:focus, .navbar .navbar__submenu li a:hover,
+.navbar .navbar__submenu li a:active,
+.navbar .navbar__submenu li a:focus,
+.navbar .navbar__submenu li a:hover,
 .navbar .navbar__submenu li span[aria-haspopup=true]:active,
 .navbar .navbar__submenu li span[aria-haspopup=true]:focus,
 .navbar .navbar__submenu li span[aria-haspopup=true]:hover {
-  background: rgba(var(--black-rgb), 0.05);
+  background: rgba(252, 225, 13, 0.6);
   color: var(--white) !important;
 }
 .navbar .navbar__submenu li span {
@@ -1173,6 +1197,7 @@ textarea {
 }
 .navbar .navbar__submenu li:hover > a, .navbar .navbar__submenu li:hover > span[aria-haspopup=true] {
   color: var(--black) !important;
+  border-radius: 0;
 }
 .navbar .navbar__toggle {
   background: var(--white);
@@ -1294,7 +1319,7 @@ textarea {
   overflow: auto;
   pointer-events: auto;
   position: fixed;
-  top: 4.4rem;
+  top: 4rem;
   -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
   -o-transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
   transition: all 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -1461,10 +1486,9 @@ textarea {
 
 .readmore {
   display: inline-block;
-  color: var(--gray-2);
+  color: var(--color);
   font-size: 0.8239746086rem;
-  font-style: italic;
-  text-decoration: underline;
+  font-weight: bold;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
 }
@@ -1525,10 +1549,10 @@ textarea {
 .hero__image--overlay::after {
   content: "";
   display: block;
-  height: 100%;
+  height: 8rem;
   left: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   width: 100%;
 }
 .hero__image > img {
@@ -1553,7 +1577,7 @@ textarea {
 
 .feed {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: calc(2.55rem + 1vw);
 }
@@ -1570,6 +1594,14 @@ textarea {
 
 .feed__item .wrapper {
   padding: 1rem 1.5rem;
+}
+
+.feed__item div.wrapper {
+  padding-top: 0;
+}
+
+.feed__item header.wrapper {
+  padding-bottom: 0;
 }
 
 .feed__image {
@@ -2139,13 +2171,27 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: calc(3.4rem + 1vw);
+  margin: 1rem;
+  width: 24rem;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
-@media all and (min-width: 56.25em) {
+/*@media all and (min-width: 56.25em) {
   .pagination {
     margin-top: calc(5.1rem + 1vw);
   }
+}*/
+@media all and (min-width: 82.1rem) {
+  .feed {
+    justify-content: center;
+  }
+
+  .pagination {
+    width: unset;
+  }
 }
+
 .pagination__item + .pagination__item {
   margin-left: 1.1333333333rem;
 }
@@ -2155,7 +2201,7 @@ textarea {
 
 /* Footer ------------------------ */
 .footer {
-  background: #00d1b2;
+  background: rgba(120, 193, 67, 0.8);
   font-family: var(--body-font);
   overflow: hidden;
   padding: 0.5rem var(--page-margin);
