@@ -1058,6 +1058,11 @@ textarea {
   padding: 0;
   position: relative;
   width: auto;
+  border-radius: 0.25rem;
+}
+
+.navbar .navbar__menu li.active {
+  background-color: rgba(252, 225, 13, 0.4);
 }
 
 .navbar > .navbar__menu > .active-parent > a {
@@ -1081,6 +1086,7 @@ textarea {
 .navbar .navbar__menu li span[aria-haspopup=true]:focus,
 .navbar .navbar__menu li span[aria-haspopup=true]:hover {
   color: rgba(var(--black-rgb), 0.7);
+  background-color: rgba(252, 225, 13, 0.6);
 }
 .navbar .navbar__menu li span {
   color: var(--white);
@@ -1166,6 +1172,7 @@ textarea {
 .navbar .navbar__submenu li {
   line-height: 1.5;
   font-size: 0.7241964329rem;
+  border-radius: 0;
 }
 .navbar .navbar__submenu li a,
 .navbar .navbar__submenu li span[aria-haspopup=true] {
@@ -1174,7 +1181,6 @@ textarea {
   -webkit-transition: all 0.24s ease;
   -o-transition: all 0.24s ease;
   transition: all 0.24s ease;
-  border-radius: 0;
 }
 .navbar .navbar__submenu li a:active,
 .navbar .navbar__submenu li a:focus,
@@ -1191,6 +1197,7 @@ textarea {
 }
 .navbar .navbar__submenu li:hover > a, .navbar .navbar__submenu li:hover > span[aria-haspopup=true] {
   color: var(--black) !important;
+  border-radius: 0;
 }
 .navbar .navbar__toggle {
   background: var(--white);
