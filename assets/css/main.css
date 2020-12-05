@@ -2174,6 +2174,16 @@ textarea {
     margin-top: calc(5.1rem + 1vw);
   }
 }*/
+@media all and (min-width: 82.1rem) {
+  .feed {
+    justify-content: center;
+  }
+
+  .pagination {
+    width: unset;
+  }
+}
+
 .pagination__item + .pagination__item {
   margin-left: 1.1333333333rem;
 }
