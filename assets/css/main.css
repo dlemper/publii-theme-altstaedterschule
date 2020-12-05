@@ -1059,6 +1059,11 @@ textarea {
   position: relative;
   width: auto;
 }
+
+.navbar > .navbar__menu > .active-parent > a {
+  background-color: rgba(252, 225, 13, 0.4);
+}
+
 .navbar .navbar__menu li a,
 .navbar .navbar__menu li span[aria-haspopup=true] {
   color: rgba(var(--black-rgb),.5);
@@ -1067,8 +1072,11 @@ textarea {
   -webkit-transition: all 0.24s ease-out;
   -o-transition: all 0.24s ease-out;
   transition: all 0.24s ease-out;
+  border-radius: 0.25rem;
 }
-.navbar .navbar__menu li a:active, .navbar .navbar__menu li a:focus, .navbar .navbar__menu li a:hover,
+.navbar .navbar__menu li a:active,
+.navbar .navbar__menu li a:focus,
+.navbar .navbar__menu li a:hover,
 .navbar .navbar__menu li span[aria-haspopup=true]:active,
 .navbar .navbar__menu li span[aria-haspopup=true]:focus,
 .navbar .navbar__menu li span[aria-haspopup=true]:hover {
@@ -1080,10 +1088,10 @@ textarea {
   display: block;
   padding: 0 0.5666666667rem;
 }
-.navbar .navbar__menu > li:hover > a, .navbar .navbar__menu > li:hover > span[aria-haspopup=true] {
+.navbar .navbar__menu > li:hover > a,
+.navbar .navbar__menu > li:hover > span[aria-haspopup=true] {
   color: rgba(var(--black-rgb), 0.7);
-  background: rgba(var(--black-rgb), .1);
-  border-radius: 0.25rem;
+  background: rgba(252, 225, 13, 0.6);
 }
 .navbar .has-submenu:active > .navbar__submenu,
 .navbar .has-submenu:focus > .navbar__submenu,
@@ -1149,6 +1157,8 @@ textarea {
   -o-transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
   transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
   transition: opacity 0.15s, transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1), -webkit-transform 0.3s cubic-bezier(0.275, 1.375, 0.8, 1);
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 .navbar .navbar__submenu__submenu {
   z-index: 2;
@@ -1165,11 +1175,13 @@ textarea {
   -o-transition: all 0.24s ease;
   transition: all 0.24s ease;
 }
-.navbar .navbar__submenu li a:active, .navbar .navbar__submenu li a:focus, .navbar .navbar__submenu li a:hover,
+.navbar .navbar__submenu li a:active,
+.navbar .navbar__submenu li a:focus,
+.navbar .navbar__submenu li a:hover,
 .navbar .navbar__submenu li span[aria-haspopup=true]:active,
 .navbar .navbar__submenu li span[aria-haspopup=true]:focus,
 .navbar .navbar__submenu li span[aria-haspopup=true]:hover {
-  background: rgba(var(--black-rgb), 0.05);
+  background: rgba(252, 225, 13, 0.6);
   color: var(--white) !important;
 }
 .navbar .navbar__submenu li span {
@@ -1557,7 +1569,7 @@ textarea {
 
 .feed {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: calc(2.55rem + 1vw);
 }
@@ -2151,13 +2163,17 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: calc(3.4rem + 1vw);
+  margin: 1rem;
+  width: 24rem;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
-@media all and (min-width: 56.25em) {
+/*@media all and (min-width: 56.25em) {
   .pagination {
     margin-top: calc(5.1rem + 1vw);
   }
-}
+}*/
 .pagination__item + .pagination__item {
   margin-left: 1.1333333333rem;
 }
