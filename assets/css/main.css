@@ -1174,6 +1174,7 @@ textarea {
   -webkit-transition: all 0.24s ease;
   -o-transition: all 0.24s ease;
   transition: all 0.24s ease;
+  border-radius: 0;
 }
 .navbar .navbar__submenu li a:active,
 .navbar .navbar__submenu li a:focus,
