@@ -319,7 +319,7 @@
             "name": "navbarHeight",
             "group": "Navbar",
             "label": "Navbar height",
-            "value": "5rem",
+            "value": "4rem",
             "type": "text"
         },    
         {

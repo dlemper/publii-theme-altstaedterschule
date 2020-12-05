@@ -8,7 +8,7 @@ var generateOverride = function (params) {
       if (
         params.pageMargin !== '6vw' ||
         params.pageWidth !== '42rem' || 
-        params.navbarHeight !== '4.4rem' || 
+        params.navbarHeight !== '4.0rem' || 
         params.lineHeight !== '1.7' || 
         params.fontNormalWeight !== '400' || 
         params.fontBoldWeight !== '700' || 
