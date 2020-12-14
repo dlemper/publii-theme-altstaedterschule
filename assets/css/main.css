@@ -1587,6 +1587,8 @@ textarea {
 }
 
 .feed__item {
+  display: flex;
+  flex-direction: column;
   margin: 1rem;
   padding-bottom: calc(0.5666666667rem + 1vw);
   overflow: hidden;
@@ -1594,10 +1596,69 @@ textarea {
   max-width: 24rem;
   border-radius: 0.25rem;
   background-color: var(--white);
+  box-sizing: border-box;
+}
+
+.feed__item > img {
+  width: 100%;
+  height: 14.4rem;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+@media all and (min-width: 26.25rem) {
+  .feed__item {
+    flex-direction: row;
+    max-width: 100%;
+    padding-bottom: 0;
+  }
+
+  .feed__item > img {
+    width: 33%;
+    height: 100%;
+  }
+
+  .feed__item > div {
+    width: 67%;
+  }
+}
+
+@media all and (min-width: 52rem) {
+  .feed__item {
+    flex-direction: column;
+    max-width: 24rem;
+    padding-bottom: calc(0.5666666667rem + 1vw);
+  }
+
+  .feed__item > img {
+    width: 100%;
+    height: 14.4rem;
+  }
+
+  .feed__item > div {
+    width: unset;
+  }
+}
+
+@media all and (min-width: 82.1rem) {
+  .feed {
+    justify-content: center;
+  }
+}
+
+@media all and (min-width: 82.1rem) {
+  .feed {
+    justify-content: center;
+  }
+
+  .feed__item {
+    flex-direction: column;
+  }
 }
 
 .feed__item .wrapper {
   padding: 1rem 1.5rem;
+  margin: 0;
 }
 
 .feed__item div.wrapper {
@@ -2175,25 +2236,11 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1rem;
-  width: 24rem;
+  margin-bottom: calc(2.55rem + 1vw);
+  max-width: 100%;
   padding: 0;
   justify-content: center;
   align-items: center;
-}
-/*@media all and (min-width: 56.25em) {
-  .pagination {
-    margin-top: calc(5.1rem + 1vw);
-  }
-}*/
-@media all and (min-width: 82.1rem) {
-  .feed {
-    justify-content: center;
-  }
-
-  .pagination {
-    width: unset;
-  }
 }
 
 .pagination__item + .pagination__item {
