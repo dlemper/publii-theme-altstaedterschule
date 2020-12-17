@@ -3,7 +3,7 @@
     <title>Altstädter Schule</title>
     <link href="https://dlemper.github.io/publii-theme-altstaedterschule/feed.xml" rel="self" />
     <link href="https://dlemper.github.io/publii-theme-altstaedterschule" />
-    <updated>2020-12-14T20:58:24+01:00</updated>
+    <updated>2020-12-14T21:46:53+01:00</updated>
     <author>
         <name>Rita Lemper</name>
     </author>
@@ -16,8 +16,10 @@
         </author>
         <link href="https://dlemper.github.io/publii-theme-altstaedterschule/foo-bar-2000-2/"/>
         <id>https://dlemper.github.io/publii-theme-altstaedterschule/foo-bar-2000-2/</id>
+            <category term="cringe"/>
+            <category term="bla"/>
 
-        <updated>2020-12-14T20:58:24+01:00</updated>
+        <updated>2020-12-14T21:46:53+01:00</updated>
             <summary>
                 <![CDATA[
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est&hellip;
