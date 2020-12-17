@@ -2317,6 +2317,8 @@ textarea {
   width: auto !important;
   visibility: hidden;
   z-index: 999;
+  background-color: rgba(238, 55, 35, 0.7);
+  border-color: rgba(238, 55, 35, 0.7);
 }
 @media all and (min-width: 56.25em) {
   .footer__bttop {
@@ -2519,4 +2521,8 @@ textarea {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
+}
+
+.cursor-default > a {
+  cursor: default;
 }
